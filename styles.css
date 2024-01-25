@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+body{
+    height: 1fr;
+}
+  .container{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas: 
+    "side-bar header"
+    "side-bar main";
+    
+
+ 
+  }
+
+  .header{
+    background-color: yellow;
+    grid-area: header;
+  }
+
+  .side-bar{
+    background-color: lightblue;
+    grid-area: side-bar;
+  }
+
+  .main{
+    background-color: gray;
+    grid-area: main;
+  }
