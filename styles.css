@@ -11,19 +11,14 @@ body{
   .container{
     display: grid;
     grid-template-columns: 15% 1fr;
-    grid-template-rows: 10vh 90vh;
+    grid-template-rows: 20vh 80vh;
     grid-template-areas: 
     "side-bar header"
     "side-bar main";
   }
 
-  .header{
-    background-color: yellow;
-    grid-area: header;
-  }
-
   .side-bar{
-    background-color: #334155;
+    background-color: #0284c7;
     grid-area: side-bar;
     color: white;
     font-weight: bold;
@@ -61,16 +56,81 @@ body{
 
   .header{
     display: grid;
+    grid-area: header;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: #334155;
   }
-  .header-content{
-    background-color: red;
+ 
+
+  .header-barra-busqueda{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  .header-barra-busqueda > button{
+    border-radius: 5px;
+    border: none;
+    
+  }
+
+  .header-notificaciones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+  
+
+  }
+
+  .header-notificaciones > img{
+    overflow: hidden;
+    border-radius: 90%;
+    width: 70px;
+    margin-right: 40px;
+    margin-left: 40px;
+   
+  
+  }
+  .header-barra-busqueda > input {
+    border-radius: 10px;
+    border: none;
+    background-color: #d6eaf4;
+    width: 60%;
+  }
+
+  .header-usuario{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    
+  }
+
+  .header-botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+  }
+
+ .header-botones > button{
+  background-color: #0284c7;
+  color: white;
+  font-size: 20px;
+  height: 40px;
+  width: 180px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+
+ }
+  
 
   .main{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
      "main-projects main-news"
@@ -78,8 +138,26 @@ body{
   }
 
   .main-projects{
-    background-color: blanchedalmond;
+    background-color: #d6eaf4;
     grid-area: main-projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap:40px;
+    margin: 10px;
+    
+  }
+
+  .main-projects-card{
+    width: 500px;
+    height: 200px;
+    background-color: pink;
+    border: solid 1px black;
+    margin-left: 60px;
+    margin-right: 10px;
+    margin-bottom: 10%;
+    
+    
   }
 
   .main-news{
