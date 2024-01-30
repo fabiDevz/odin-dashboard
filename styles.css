@@ -6,6 +6,10 @@
 
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   height: 1fr;
 }
@@ -24,27 +28,51 @@ body {
   grid-area: side-bar;
   color: white;
   font-weight: bold;
-}
-
-.side-bar-content {
-
   display: grid;
-  height: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(10, 100px);
-  gap: 2px;
-
+  grid-template-rows: 15% 1fr 1fr;
 }
 
-.side-bar-item {
-
-  margin-left: 30px;
-  margin-top: 50px;
+.side-bar-logo{
   display: flex;
+  justify-content: center;
   align-items: center;
-  align-content: center;
-
+  gap: 15px;
+  margin-left: 20px;
 }
+
+.side-bar-logo > img{
+  width: 100px;
+}
+
+.side-bar-logo > h3{
+  font-size: 25px;
+}
+
+.side-bar-main-links{
+  gap:50px;
+}
+
+.side-bar-main-links ul > li{
+
+  display: flex;
+ justify-content: left;
+ align-items: center;
+ gap: 40px;
+ margin-top: 20px;
+}
+
+.side-bar-second-links ul > li{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap:40px;
+  margin-top: 20px;
+}
+
+
+
+
 
 svg {
   margin-right: 20px;
@@ -65,31 +93,41 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-left: 10%;
 }
 
-.header-barra-busqueda>button {
-  border-radius: 5px;
-  border: none;
-
+.header-barra-busqueda > input{
+  flex:1;
 }
+
+
 
 .header-notificaciones {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   color: #ffffff;
-
+  
+  
 
 }
 
 .header-notificaciones>img {
   overflow: hidden;
-  border-radius: 90%;
+  border-radius: 50%;
   width: 70px;
   margin-right: 40px;
   margin-left: 40px;
+  
+}
 
+#campanita{
+  width: 50px;
+}
 
+.header-notificaciones > h1{
+  font-size: 30px;
 }
 
 .header-barra-busqueda>input {
@@ -101,9 +139,30 @@ svg {
 
 .header-usuario {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 20% 1fr;
 
+}
 
+.header-usuario-photo > img{
+  border-radius: 50%;
+  width: 100px;
+  margin-left: 100px;
+}
+
+.header-usuario-bienvenida{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin-left: 60px;
+  > h4{
+    font-size: 20px;
+  }
+
+  > h3{
+    font-size: 40px ;
+  }
 }
 
 .header-botones {
@@ -175,18 +234,72 @@ svg {
 
 
 .main-news {
-  background-color: yellowgreen;
+  
   grid-area: main-news;
+  background-color: #d6eaf4;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: 10px
+}
+
+
+
+.main-news-card{
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #334155;
+  border-radius: 20px;
+  margin-right: 10%;
+  color: white;
+  border: none;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+.main-news > h1{
+  font-size: 30px;
+  align-items: left;
+}
+
+.main-news-card > p{
+ margin: 20px;
+  
 }
 
 .main-trending {
-  background-color: brown;
+  background-color: #d6eaf4;
   grid-area: main-trending;
+  border-radius: 15px;
+  background-color: #d6eaf4
 }
 
+.main-trending-card{
+  background-color: #334155;
+  border-radius: 20px;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
 
 /* 
   #0284c7 tono azul
   #334155 tono gris oscuro
   #047857 tono verde esmeralda
   */
+
+  /* Puedes agregar estilos adicionales según tus necesidades */
+hr {
+  border: none; /* Eliminar el borde predeterminado del navegador */
+  border-top: 2px solid #b6b4b4; /* Añadir un nuevo borde superior personalizado */
+  margin: 10px 0; /* Margen superior e inferior para espaciar la línea */
+  width: 70%;
+}
