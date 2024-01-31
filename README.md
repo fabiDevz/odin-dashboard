@@ -1,4 +1,4 @@
-<h3> Página web con formulario  </h3>
+<h3> Página tipo Dashboard  </h3>
 
 <p align="center">
     Dashboard (Panel de administración) 
